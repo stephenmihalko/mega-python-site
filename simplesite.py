@@ -8,8 +8,13 @@ app=Flask(__name__)
 @app.route('/')
 
 def home():
-    # This needs to be a real thing in the "templates" folder.
-    return render_template("home.html")
+	# This needs to be a real thing in the "templates" folder.
+	return render_template("home.html")
+
+@app.route('/about/')
+
+def about():
+	return render_template("about.html")
 
 # When you execute a script, this is true.
 # When  you import a script, __name__ is given the name of the script.
